@@ -1,0 +1,180 @@
+<style type="text/css">
+  #my-finance-modal td, #my-finance-modal th{
+    font-size: 14px;
+    line-height: 24px;
+  }
+  
+  .table .text-stainless-steel {
+    line-height: 24px;
+    font-size:14px;
+  }
+  .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    border-top: 1px solid #eeeeee;
+  }
+  @media screen and (max-width: 767px) {
+    .finance-table {
+      border: none;
+    }
+    .finance-table tr td:nth-child(3) {
+      padding-left: 10px;
+    }
+    #my-finance-modal .modal-body {padding:5px;}
+    
+    #my-finance-modal th td tr {text-align:center;}
+    
+    .m-p0 {padding-left:4px; padding-right:4px;}
+  }
+  @media screen and (min-width: 768px) {
+    .finance-table tr td:nth-child(3),
+    .finance-table tr th:nth-child(3) {
+      padding-left: 100px;
+    }
+    .d-tal {text-align: left!important;}
+  }
+</style>
+<div id="my-finance-modal" class="modalx fadex finance-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="border: none !important; padding-bottom: 0;">
+        <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+          <span aria-hidden="true" class="font-size-xxxlg">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-responsive finance-table" style="border: none !important; ">
+          <thead style="border-bottom: none !important;">
+            <tr>
+              <th class="text-uppercase m-p0 d-tal m-tac" style="vertical-align: top!important;">Bed Model</th>
+              <th class="text-uppercase m-p0 d-tal m-tac" style="vertical-align: top!important;">Financing offer</th>
+              <th class="text-uppercase m-p0 d-tal m-tac" style="vertical-align: top!important;">Valid with<br> Promotional Sale</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="m-tac">k2</td>
+              <td class=" m-tac">12 months<sup>&Dagger;</sup></td>
+              <td class=" m-tac"><i class="fa fa-check text-dark"></i><span class="sr-only">n/a</span></td>
+            </tr>
+            
+            <tr>
+              <td class="m-tac">c2</td>
+              <td class="m-tac">36 months<sup>*</sup></td>
+              <td class="m-tac"><i class="fa fa-check text-dark"></i><span class="sr-only">no</span></td>
+            </tr>
+            <tr>
+              <td class="m-tac">c4</td>
+               <td class="m-tac">12 months<sup>&Dagger;</sup></td>
+              <td class="m-tac"><i class="fa fa-check fa-check text-dark"></i><span class="sr-only">yes</span></td>
+            </tr>
+            <tr>
+              <td class="m-tac">c4</td>
+              <td class="m-tac">36 months<sup>*</sup></td>
+              <td class="m-tac"><i class="fa fa-check text-dark"></i><span class="sr-only">no</span></td>
+            </tr>
+             <tr>
+              <td class="m-tac">p5</td>
+               <td class="m-tac">12 months<sup>&Dagger;</sup></td>
+              <td class="m-tac"><i class="fa fa-check fa-check text-dark"></i><span class="sr-only">yes</span></td>
+            </tr>
+            <tr>
+              <td class="m-tac">p5</td>
+              <td class="m-tac">36 months<sup>*</sup></td>
+              <td class="m-tac"><i class="fa fa-check text-dark"></i><span class="sr-only">no</span></td>
+            </tr>
+            <tr>
+              <td class="m-tac">p6</td>
+               <td class="m-tac">12 months<sup>&Dagger;</sup></td>
+              <td class="m-tac"><i class="fa fa-check fa-check text-dark"></i><span class="sr-only">yes</span></td>
+            </tr>
+            <tr>
+              <td class="m-tac">p6</td>
+              <td class="m-tac">36 months<sup>*</sup></td>
+              <td class="m-tac"><i class="fa fa-check text-dark"></i><span class="sr-only">no</span></td>
+            </tr>
+            <tr>
+              <td class="m-tac">m7</td>
+               <td class="m-tac">12 months<sup>&Dagger;</sup></td>
+              <td class="m-tac"><i class="fa fa-check fa-check text-dark"></i><span class="sr-only">yes</span></td>
+            </tr>
+            <tr>
+              <td class="m-tac">m7</td>
+              <td class="m-tac">36 months<sup>*</sup></td>
+              <td class="m-tac"><i class="fa fa-check text-dark"></i><span class="sr-only">no</span></td>
+            </tr>
+           <tr>
+              <td class="m-tac">p6</td>
+               <td class="m-tac">12 months<sup>&Dagger;</sup></td>
+              <td class="m-tac"><i class="fa fa-check fa-check text-dark"></i><span class="sr-only">yes</span></td>
+            </tr>
+            <tr>
+              <td class="m-tac">p6</td>
+              <td class="m-tac">36 months<sup>*</sup></td>
+              <td class="m-tac"><i class="fa fa-check text-dark"></i><span class="sr-only">no</span></td>
+            </tr>
+            <tr>
+              <td class="m-tac">i8</td>
+               <td class="m-tac">12 months<sup>&Dagger;</sup></td>
+              <td class="m-tac"><i class="fa fa-check fa-check text-dark"></i><span class="sr-only">yes</span></td>
+            </tr>
+            <tr>
+              <td class="m-tac">i8</td>
+              <td class="m-tac">36 months<sup>*</sup></td>
+              <td class="m-tac"><i class="fa fa-check text-dark"></i><span class="sr-only">no</span></td>
+            </tr>
+            <tr>
+              <td class="m-tac">i10</td>
+               <td class="m-tac">12 months<sup>&Dagger;</sup></td>
+              <td class="m-tac"><i class="fa fa-check fa-check text-dark"></i><span class="sr-only">yes</span></td>
+            </tr>
+            <tr>
+              <td class="m-tac">i10</td>
+              <td class="m-tac">36 months<sup>*</sup></td>
+              <td class="m-tac"><i class="fa fa-check text-dark"></i><span class="sr-only">no</span></td>
+            </tr>
+           <tr>
+              <td class="m-tac">r3</td>
+               <td class="m-tac">12 months<sup>&Dagger;</sup></td>
+              <td class="m-tac"><i class="fa fa-check fa-check text-dark"></i><span class="sr-only">yes</span></td>
+            </tr>
+            <tr>
+              <td class="m-tac">r3</td>
+              <td class="m-tac">36 months<sup>*</sup></td>
+              <td class="m-tac"><i class="fa fa-check text-dark"></i><span class="sr-only">no</span></td>
+            </tr>
+            <tr>
+              <td class="m-tac">r5</td>
+               <td class="m-tac">12 months<sup>&Dagger;</sup></td>
+              <td class="m-tac"><i class="fa fa-check fa-check text-dark"></i><span class="sr-only">yes</span></td>
+            </tr>
+            <tr>
+              <td class="m-tac">r5</td>
+              <td class="m-tac">36 months<sup>*</sup></td>
+              <td class="m-tac"><i class="fa fa-check text-dark"></i><span class="sr-only">no</span></td>
+            </tr>
+            <tr>
+              <td class="m-tac">Flexfit<sup>&trade;</sup> 1</td>
+               <td class="m-tac">12 months<sup>&Dagger;</sup></td>
+              <td class="m-tac"><i class="fa fa-check fa-check text-dark"></i><span class="sr-only">yes</span></td>
+            </tr>
+            <tr>
+              <td class="m-tac">Flexfit<sup>&trade;</sup> 2</td>
+               <td class="m-tac">12 months<sup>&Dagger;</sup></td>
+              <td class="m-tac"><i class="fa fa-check fa-check text-dark"></i><span class="sr-only">yes</span></td>
+            </tr>
+            <tr>
+              <td class="m-tac">Flexfit<sup>&trade;</sup> 3</td>
+              <td class="m-tac">36 months<sup>*</sup></td>
+              <td class="m-tac"><i class="fa fa-check fa-check text-dark"></i><span class="sr-only">yes</span></td>
+            </tr>
+            <tr>
+              <td class="m-tac">DualTemp<sup>&trade;</sup> layer</td>
+              <td class="m-tac">12 months<sup>&Dagger;</sup></td>
+              <td class="m-tac"><i class="fa fa-check text-dark"></i><span class="sr-only">n/a</span></td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
