@@ -16,14 +16,12 @@ jobs:
            container_name: ${{ secrets.CONTAINER_NAME }}
            blob_prefix: ${{ secrets.BLOB_PREFIX }}
            output_file: 'results.json'
-       - name: Commit edited json file
-         run: |
-          git status	
-          git config --local user.name  ${{ github.actor }}	
-          git add results.json	
-          git commit -m "Update json file with blob content"	
-       - name: Push changes 
-         uses: ad-m/github-push-action@master	
-         with:	
-          github_token: ${{ secrets.TOKEN }}	
-          force: true 
+       - uses: tpaschalis/s3-sync-action@master
+         with:
+          args: --acl public-read
+         env:
+          FILE: ./results.json
+          AWS_REGION: 'us-west-2'
+          AWS_S3_BUCKET: testingjson
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}  
