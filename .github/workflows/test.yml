@@ -1,0 +1,29 @@
+name: Download file from azure, custom js
+on: workflow_dispatch
+jobs: 
+  fetch_blob:
+     name: Download content from azure and save to json file
+     runs-on: ubuntu-latest
+     steps:
+       - uses: actions/checkout@v2
+       - uses: actions/setup-node@v2
+         with:
+            node-version: '12'
+       - uses: mquintSN/blob-fetch-action@main
+         with:
+           storage_account_name: ${{ secrets.STORAGE_ACCOUNT_NAME }}
+           account_access_key: ${{ secrets.ACCOUNT_ACCESS_KEY }}
+           container_name: ${{ secrets.CONTAINER_NAME }}
+           blob_prefix: ${{ secrets.BLOB_PREFIX }}
+           output_file: 'results.json'
+       - name: Commit edited json file
+         run: |
+          git status	
+          git config --local user.name  ${{ github.actor }}	
+          git add results.json	
+          git commit -m "Update json file with blob content"	
+       - name: Push changes 
+         uses: ad-m/github-push-action@master	
+         with:	
+          github_token: ${{ secrets.TOKEN }}	
+          force: true 
