@@ -9,18 +9,19 @@ jobs:
        - uses: actions/setup-node@v2
          with:
             node-version: '12'
+       - run: touch sleepData.json
        - uses: mquintSN/blob-fetch-action@main
          with:
            storage_account_name: ${{ secrets.STORAGE_ACCOUNT_NAME }}
            account_access_key: ${{ secrets.ACCOUNT_ACCESS_KEY }}
            container_name: ${{ secrets.CONTAINER_NAME }}
            blob_prefix: ${{ secrets.BLOB_PREFIX }}
-           output_file: 'results.json'
+           output_file: 'sleepData.json'
        - uses: tpaschalis/s3-sync-action@master
          with:
           args: --acl public-read
          env:
-          FILE: ./results.json
+          FILE: ./sleepData.json
           AWS_REGION: 'us-east-1'
           AWS_S3_BUCKET: sn-sleep-science
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
